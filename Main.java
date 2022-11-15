@@ -2,35 +2,18 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args)
    {
-//        Employee emp1 = new Employee();
-//        EmployeeWithTerritory emp2 = new EmployeeWithTerritory();
-//
-//
-//        System.out.println("This is employee " + emp1.getId() + " and he makes $" + emp1.getSalary() );
-//
-//        System.out.println("employee" + emp2.getId() + " makes " + emp2.getSalary() + " and has the "
-//                + emp2.getTerritory() + "territory");
-
-//Employee emp1 = new Employee(1, 2.99);
-//System.out.println(emp1.getId() + "   " + emp1.getSalary());
-//
-//EmployeeWithTerritory emp2 = new EmployeeWithTerritory(1 , 29.0, 5);
-//System.out.println(emp2.getId() + " " +emp2.getSalary() + "  " + emp2.getTerritory());
-//
-//EmployeeWithEmployeeHousing emp3 = new EmployeeWithEmployeeHousing(1, 23, 1, 1, 345.99);
-//System.out.println(emp3.getId() + " " + emp3.getSalary() + " " + emp3.getRoomID() + " " + emp3.getFloorLevel() + "  " +emp3.getRent());
-
-
+        //makes the scanner that we will use to gather the users input
        Scanner userInput = new Scanner(System.in);
        System.out.println("Would you like to create a Regular Employee (1) Employee with territory (2) or " +
                " Employee using Employee Housing (3) ");
        int choice = userInput.nextInt();
        if (choice == 1){
+           //lets us make choices for our user
            System.out.println("what ID number would you like to give the new Employee");
-           int idNum = userInput.nextInt();
+           int idNum = userInput.nextInt();// these parts will let you grab the input
            System.out.println("enter the new Employees Salary");
            double sal = userInput.nextDouble();
-           Employee emp1 = new Employee(idNum, sal);
+           Employee emp1 = new Employee(idNum, sal);// this calls the constructor with the data we get from the user
            System.out.println("Employee ID: " + emp1.getId() + " with a salary of $" + emp1.getSalary() + " has been " +
                    "created");
 
@@ -49,7 +32,7 @@ public class Main {
        }
 
        if (choice == 3){
-           System.out.println("What ID number would you like to give to the new Employee with territory");
+           System.out.println("What ID number would you like to give to the new Employee with Employee Housing");
            int idNum = userInput.nextInt();
            System.out.println("Enter the new Employees Salary");
            double sal = userInput.nextDouble();
@@ -60,7 +43,9 @@ public class Main {
            System.out.println("How much will the Employee pay for rent");
            double rent = userInput.nextDouble();
            EmployeeWithEmployeeHousing emp3 = new EmployeeWithEmployeeHousing(idNum, sal, floorLevel, roomId, rent);
-           System.out.println("Employee ID: " + emp3.getId() + " ");
+           System.out.println("Employee ID: " + emp3.getId() + " with a salary of $" + emp3.getSalary() +
+                   " Living on Floor " + emp3.getFloorLevel() + " Room number " + emp3.getRoomID() + " with a rent of "
+           + emp3.getRent()) ;
 
        }
 

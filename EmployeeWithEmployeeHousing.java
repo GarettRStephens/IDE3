@@ -1,8 +1,10 @@
 public class EmployeeWithEmployeeHousing extends Employee
 {
+    //Variables
 private int RoomID;
 private double Rent;
 private int FloorLevel;
+
 
      public EmployeeWithEmployeeHousing(int idNum, double sal, int floorLevel, int roomID, double rent){
          super(idNum, sal);
@@ -10,9 +12,9 @@ private int FloorLevel;
          this.FloorLevel = floorLevel;
          this.Rent = rent;
 
-     }
+     } // ends constructor
 
-
+// these return the new variables with this constructor
     public int getRoomID() {
     return RoomID;
 
